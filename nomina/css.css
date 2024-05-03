@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.dashboard {
+    float: left;
+    width: 200px;
+    height: 180vh;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.dashboard h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.dashboard p {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.dashboard a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dashboard a:hover {
+    text-decoration: underline;
+}
+
+#nomina-options {
+    display: none;
+}
+
+#nomina-options ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#nomina-options ul li {
+    margin-bottom: 5px;
+}
+
+#nomina-options ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#nomina-options ul li a:hover {
+    text-decoration: underline;
+}
+
+
+.container {
+    margin-left: 220px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.label-input-group {
+    margin-bottom: 20px;
+}
+
+.label-input-group label {
+    width: 120px; /* Reducir el ancho de las etiquetas */
+    float: left;
+    font-size: 16px;
+}
+
+.label-input-group input {
+    width: calc(60% - 140px); /* Reducir el ancho de los campos de entrada */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.note {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+}
+
+.hr {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.login-container {
+    margin-top: 100px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px; /* Ajusta el ancho del contenedor del formulario según sea necesario */
+}
+
+.login-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Ajusta el margen superior del botón */
+}
+
+.login-container button[type="submit"]:hover {
+    background-color: #45a049;
+}
+.login-label-input-group {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 50px;
+    font-size: 18px;
+    width: 175px;
+}
+.logout-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Ajusta el margen superior del botón */
+}
+
+.logout-button:hover {
+    background-color: #45a049;
+}
+
+/* Esto asegura que el botón esté siempre al final de la página */
+.logout-button-container {
+    position: fixed;
+    bottom: 10px;
+    width: calc(100% - 240px); /* Toma en cuenta el ancho del dashboard */
+    margin-left: 220px; /* Ajusta el margen izquierdo para coincidir con el dashboard */
+}

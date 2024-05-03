@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Nómina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            width: calc(100% - 12px);
+            padding: 6px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8"><path fill="%23424242" d="M6 8L0 0h12"/></svg>') no-repeat;
+            background-position: right 8px center;
+            background-size: 12px;
+        }
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formulario de Nómina</h1>
+        <form action="procesar_nominas.php" method="post">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div>
+                <label for="identificacion">Identificación:</label>
+                <input type="text" id="identificacion" name="identificacion" required>
+            </div>
+            <div>
+                <label for="genero">Género:</label>
+                <select id="genero" name="genero" required>
+                    <option value="">Seleccionar...</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+            </div>
+            <div>
+                <label for="estado_civil">Estado Civil:</label>
+                <select id="estado_civil" name="estado_civil" required>
+                    <option value="">Seleccionar...</option>
+                    <option value="Soltero">Soltero</option>
+                    <option value="Casado">Casado</option>
+                    <option value="Divorciado">Divorciado</option>
+                    <option value="Viudo">Viudo</option>
+                </select>
+            </div>
+            <div>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </div>
+            <div>
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+            </div>
+            <div>
+                <label for="email">Correo Electrónico:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="fecha_ingreso">Fecha de Ingreso:</label>
+                <input type="date" id="fecha_ingreso" name="fecha_ingreso" required>
+            </div>
+            <div>
+                <label for="tipo_contrato">Tipo de Contrato:</label>
+                <select id="tipo_contrato" name="tipo_contrato" required>
+                    <option value="">Seleccionar...</option>
+                    <option value="Temporal">Temporal</option>
+                    <option value="Indefinido">Indefinido</option>
+                    <option value="Tiempo parcial">Tiempo parcial</option>
+                </select>
+            </div>
+            <div>
+                <label for="cargo">Cargo:</label>
+                <input type="text" id="cargo" name="cargo" required>
+            </div>
+            <div>
+                <label for="departamento">Departamento:</label>
+                <input type="text" id="departamento" name="departamento" required>
+            </div>
+            <div>
+                <label for="salario_base">Salario Base:</label>
+                <input type="number" id="salario_base" name="salario_base" step="0.01" required>
+            </div>
+            <div>
+                <label for="tipo_pago">Tipo de Pago:</label>
+                <select id="tipo_pago" name="tipo_pago" required>
+                    <option value="">Seleccionar...</option>
+                    <option value="Por hora">Por hora</option>
+                    <option value="Mensual">Mensual</option>
+                    <option value="Quincenal">Quincenal</option>
+                </select>
+            </div>
+            <div>
+                <label for="horas_trabajo">Horas de Trabajo:</label>
+                <input type="number" id="horas_trabajo" name="horas_trabajo" step="0.01" required>
+            </div>
+            <div>
+                <label for="fecha_pago">Fecha de Pago:</label>
+                <input type="date" id="fecha_pago" name="fecha_pago" required>
+            </div>
+            <div>
+                <label for="periodo_pago">Periodo de Pago:</label>
+                <input type="text" id="periodo_pago" name="periodo_pago" required>
+            </div>
+            <div>
+                <label for="horas_trabajadas">Horas Trabajadas:</label>
+                <input type="number" id="horas_trabajadas" name="horas_trabajadas" step="0.01" required>
+            </div>
+            <div>
+                <label for="horas_extras">Horas Extra:</label>
+                <input type="number" id="horas_extras" name="horas_extras" step="0.01" required>
+            </div>
+            <div>
+                <label for="bonificaciones">Bonificaciones:</label>
+                <input type="number" id="bonificaciones" name="bonificaciones" step="0.01" required>
+            </div>
+            <div>
+                <label for="incentivos">Incentivos:</label>
+                <input type="number" id="incentivos" name="incentivos" step="0.01" required>
+            </div>
+            <div>
+                <label for="otros_ingresos">Otros Ingresos:</label>
+                <input type="number" id="otros_ingresos" name="otros_ingresos" step="0.01" required>
+            </div>
+            <div>
+                <label for="total_devengado">Total Devengado:</label>
+                <input type="number" id="total_devengado" name="total_devengado" step="0.01" required>
+            </div>
+            <div>
+                <label for="deducciones">Deducciones:</label>
+                <input type="number" id="deducciones" name="deducciones" step="0.01" required>
+            </div>
+            <div>
+                <label for="total_neto">Total Neto:</label>
+                <input type="number" id="total_neto" name="total_neto" step="0.01" required>
+            </div>
+            <div>
+                <label for="AFP">AFP:</label>
+                <input type="number" id="AFP" name="AFP" step="0.01" required>
+            </div>
+            <div>
+                <label for="SFS">SFS:</label>
+                <input type="number" id="SFS" name="SFS" step="0.01" required>
+            </div>
+            <div>
+                <label for="ISR">ISR:</label>
+                <input type="number" id="ISR" name="ISR" step="0.01" required>
+            </div>
+            <div>
+                <label for="dependientes">Dependientes:</label>
+                <input type="number" id="dependientes" name="dependientes" required>
+            </div>
+            <div>
+                <label for="estado_nomina">Estado de la Nómina:</label>
+                <select id="estado_nomina" name="estado_nomina" required>
+                    <option value="">Seleccionar...</option>
+                    <option value="Pagada">Pagada</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Anulada">Anulada</option>
+                </select>
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
